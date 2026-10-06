@@ -1,0 +1,47 @@
+=== distance ===
+distance       | a=[0, 0], b=[3, 4]                                      | attendu=5.0      | obtenu=5.0      | OK  # triplet pythagoricien 3-4-5
+distance       | a=[5, 5], b=[5, 5]                                      | attendu=0.0      | obtenu=0.0      | OK  # points identiques
+distance       | a=[0, 0], b=[7, 0]                                      | attendu=7.0      | obtenu=7.0      | OK  # même ordonnée
+distance       | a=[2, 9], b=[2, 3]                                      | attendu=6.0      | obtenu=6.0      | OK  # même abscisse
+distance       | a=[3, 4], b=[0, 0]                                      | attendu=5.0      | obtenu=5.0      | OK  # symétrie d(a,b)=d(b,a)
+distance       | a=[-1, -1], b=[2, 3]                                    | attendu=5.0      | obtenu=5.0      | OK  # coordonnées négatives
+distance       | a=[75, 80], b=[78, 84]                                  | attendu=5.0      | obtenu=5.0      | OK  # cas réel : clic à 5 px d'un bouton
+distance       | a=[0, 0], b=[1, 1]                                      | attendu=1.4142135623730951 | obtenu=1.4142135623730951 | OK  # résultat irrationnel
+
+=== nbBienPlaces ===
+nbBienPlaces   | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Vert,Bleu,Orange,Rose] | attendu=5        | obtenu=5        | OK  # identique
+nbBienPlaces   | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Noir,Blanc,Gris,Noir,Blanc] | attendu=0        | obtenu=0        | OK  # aucune couleur commune
+nbBienPlaces   | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Vert,Rouge,Orange,Bleu,Rose] | attendu=1        | obtenu=1        | OK  # seul le dernier est bien placé
+nbBienPlaces   | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Noir,Bleu,Noir,Rose] | attendu=3        | obtenu=3        | OK  # cas mixte, 3 bien placés
+nbBienPlaces   | S=[Rouge,Rouge,Rouge,Rouge,Rouge] P=[Rouge,Vert,Rouge,Vert,Rouge] | attendu=3        | obtenu=3        | OK  # secret monochrome
+nbBienPlaces   | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rose,Orange,Bleu,Vert,Rouge] | attendu=1        | obtenu=1        | OK  # inversion : seul le centre reste
+
+=== nbCouleursCommunes ===
+nbCouleursCom. | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Vert,Bleu,Orange,Rose] | attendu=5        | obtenu=5        | OK  # identique
+nbCouleursCom. | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Noir,Blanc,Gris,Noir,Blanc] | attendu=0        | obtenu=0        | OK  # aucune couleur commune
+nbCouleursCom. | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Vert,Rouge,Rose,Bleu,Orange] | attendu=5        | obtenu=5        | OK  # permutation : toutes les couleurs sont communes
+nbCouleursCom. | S=[Rouge,Rouge,Blanc,Gris,Noir] P=[Noir,Noir,Noir,Rouge,Rouge] | attendu=3        | obtenu=3        | OK  # N répété 3 fois dans la proposition, 1 seul dans le secret
+nbCouleursCom. | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Rouge,Rouge,Rouge,Rouge] | attendu=1        | obtenu=1        | OK  # une couleur répétée : comptée une seule fois
+nbCouleursCom. | S=[Rouge,Rouge,Rouge,Vert,Vert] P=[Vert,Vert,Vert,Rouge,Rouge] | attendu=4        | obtenu=4        | OK  # doublons des deux côtés : min(2,3)+min(3,2)
+
+=== nbMalPlaces ===
+nbMalPlaces    | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Vert,Bleu,Orange,Rose] | attendu=0        | obtenu=0        | OK  # identique : aucun mal placé
+nbMalPlaces    | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Noir,Blanc,Gris,Noir,Blanc] | attendu=0        | obtenu=0        | OK  # aucune couleur commune
+nbMalPlaces    | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Vert,Rouge,Orange,Bleu,Rose] | attendu=4        | obtenu=4        | OK  # 4 bonnes couleurs décalées + 1 bien placé
+nbMalPlaces    | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Vert,Rouge,Rose,Bleu,Orange] | attendu=5        | obtenu=5        | OK  # toutes les couleurs, aucune bien placée
+nbMalPlaces    | S=[Rouge,Rouge,Blanc,Gris,Noir] P=[Blanc,Blanc,Blanc,Blanc,Rouge] | attendu=1        | obtenu=1        | OK  # doublons : B bien placé (non recompté), seul R est mal placé
+nbMalPlaces    | S=[Rouge,Rouge,Blanc,Gris,Noir] P=[Noir,Noir,Noir,Rouge,Rouge] | attendu=3        | obtenu=3        | OK  # 3 N dans la proposition, 1 seul dans le secret : N compté une fois
+nbMalPlaces    | S=[Rouge,Rouge,Rouge,Vert,Vert] P=[Vert,Vert,Vert,Rouge,Rouge] | attendu=4        | obtenu=4        | OK  # doublons : 3 V dans prop mais 2 dans secret
+nbMalPlaces    | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Rouge,Rouge,Rouge,Rouge] | attendu=0        | obtenu=0        | OK  # une couleur répétée : un seul R compte (bien placé)
+
+=== resultat (tuple bien placés, mal placés) ===
+resultat       | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Rouge,Vert,Bleu,Orange,Rose] | attendu=(5, 0)   | obtenu=(5, 0)   | OK  # victoire
+resultat       | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Noir,Blanc,Gris,Noir,Blanc] | attendu=(0, 0)   | obtenu=(0, 0)   | OK  # rien en commun
+resultat       | S=[Rouge,Vert,Bleu,Orange,Rose] P=[Vert,Rouge,Rose,Bleu,Orange] | attendu=(0, 5)   | obtenu=(0, 5)   | OK  # que des mal placés
+resultat       | S=[Rouge,Rouge,Blanc,Gris,Noir] P=[Rouge,Blanc,Rouge,Noir,Gris] | attendu=(1, 4)   | obtenu=(1, 4)   | OK  # cas mixte avec doublons
+resultat       | S=[Rouge,Rouge,Blanc,Gris,Noir] P=[Blanc,Blanc,Blanc,Blanc,Rouge] | attendu=(1, 1)   | obtenu=(1, 1)   | OK  # doublons dans la proposition
+resultat       | S=[Vert,Vert,Vert,Vert,Vert] P=[Vert,Rouge,Rouge,Rouge,Rouge] | attendu=(1, 0)   | obtenu=(1, 0)   | OK  # secret monochrome
+
+Secret non modifié : OK
+
+TOTAL ECHECS : 0
