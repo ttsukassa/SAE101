@@ -1,0 +1,24 @@
+--- partie gagnée ---
+coup 1: résultat (1, 0)
+coup 2: résultat (1, 0)
+coup 3: résultat (1, 4)
+coup 4: résultat (3, 2)
+coup 5: résultat (5, 0)
+Vous avez gagné en 5 coups !
+--- partie perdue ---
+coup 1: résultat (0, 0)
+coup 2: résultat (0, 0)
+coup 3: résultat (0, 0)
+coup 4: résultat (0, 0)
+coup 5: résultat (0, 0)
+coup 6: résultat (0, 0)
+coup 7: résultat (0, 0)
+coup 8: résultat (0, 0)
+coup 9: résultat (0, 0)
+coup 10: résultat (0, 0)
+coup 11: résultat (0, 0)
+coup 12: résultat (0, 0)
+coup 13: résultat (0, 0)
+coup 14: résultat (0, 0)
+coup 15: résultat (0, 0)
+Vous avez perdu !
