@@ -6,7 +6,6 @@ Un petit jeu de **MasterMind** en Python 🐍 : l'ordinateur cache 5 pions de co
 et toi, tu as **15 essais** pour les retrouver.
  
 *BUT Informatique – Semestre 1 – IUT de Maubeuge (UPHF)*
-*Par : [Nom Prénom 1] & [Nom Prénom 2] 💛*
  
 ---
  
