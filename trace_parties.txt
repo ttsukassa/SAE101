@@ -1,12 +1,59 @@
---- partie gagnée ---
-coup 1: résultat (1, 0)
+--- partie 1 ---
+coup 1: résultat (2, 0)
 coup 2: résultat (1, 0)
-coup 3: résultat (1, 4)
-coup 4: résultat (3, 2)
+coup 3: résultat (0, 1)
+coup 4: résultat (0, 1)
 coup 5: résultat (5, 0)
 Vous avez gagné en 5 coups !
 
---- partie perdue ---
+--- partie 2 ---
+coup 1: résultat (2, 0)
+coup 2: résultat (1, 0)
+coup 3: résultat (2, 1)
+coup 4: résultat (0, 0)
+coup 5: résultat (0, 2)
+coup 6: résultat (1, 1)
+coup 7: résultat (1, 2)
+coup 8: résultat (5, 0)
+Vous avez gagné en 8 coups !
+
+--- partie 3 ---
+coup 1: résultat (0, 2)
+coup 2: résultat (2, 0)
+coup 3: résultat (2, 0)
+coup 4: résultat (1, 2)
+coup 5: résultat (0, 2)
+coup 6: résultat (0, 2)
+coup 7: résultat (0, 2)
+coup 8: résultat (1, 3)
+coup 9: résultat (2, 1)
+coup 10: résultat (0, 3)
+coup 11: résultat (3, 0)
+coup 12: résultat (0, 1)
+coup 13: résultat (1, 0)
+coup 14: résultat (0, 2)
+coup 15: résultat (1, 1)
+Vous avez perdu !
+
+--- partie 4 ---
+coup 1: résultat (0, 2)
+coup 2: résultat (0, 1)
+coup 3: résultat (0, 2)
+coup 4: résultat (2, 1)
+coup 5: résultat (0, 1)
+coup 6: résultat (1, 1)
+coup 7: résultat (0, 1)
+coup 8: résultat (0, 3)
+coup 9: résultat (0, 3)
+coup 10: résultat (1, 2)
+coup 11: résultat (0, 1)
+coup 12: résultat (0, 0)
+coup 13: résultat (1, 0)
+coup 14: résultat (0, 1)
+coup 15: résultat (5, 0)
+Vous avez gagné en 15 coups !
+
+--- partie 5 ---
 coup 1: résultat (0, 0)
 coup 2: résultat (0, 0)
 coup 3: résultat (0, 0)

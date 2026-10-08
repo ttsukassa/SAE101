@@ -22,9 +22,10 @@ def main() -> None:
     gagne = False
     ligne = 1
     while not gagne and ligne <= NB_COUPS_MAX:
-        prop = mm.construireProposition(fenetre, ligne)      # i
-        res = resultat(secret, prop)                          # ii
-        mm.afficherResultat(fenetre, res, ligne)              # iii
+        numLigne = ligne + 1   # mm.py afiche la ligne trop haut donc g decaler de 1
+        prop = mm.construireProposition(fenetre, numLigne)      # i
+        res = resultat(secret, prop)                             # ii
+        mm.afficherResultat(fenetre, res, numLigne)              # iii
         pygame.display.update()
         if res[0] == NB_PIONS:
             gagne = True
