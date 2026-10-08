@@ -147,7 +147,7 @@ SAE101
 
 | Une manche gagnée | Une manche perdue |
 |:---:|:---:|
-| <img src="partie_1_gagnee.png" width="330"> | <img src="partie_3_perdue.png" width="330"> |
+| <img src="partie_2.png" width="330"> | <img src="partie_3.png" width="330"> |
 
 </div>
 
