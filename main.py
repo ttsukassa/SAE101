@@ -1,26 +1,9 @@
-import random
 import pygame
 import mm
-from fonctions import resultat
+from fonctions import genererSecret, resultat, afficherMessage
 
 NB_PIONS = 5
 NB_COUPS_MAX = 15
-
-
-def genererSecret() -> list:
-    """Combinaison secrète : 5 couleurs tirées au hasard (répétitions possibles)."""
-    secret = []
-    for _ in range(NB_PIONS):
-        secret.append(random.choice(mm.TabCouleur))
-    return secret
-
-
-def afficherMessage(f: pygame.Surface, texte: str) -> None:
-    police = pygame.font.SysFont("monospace", 18)
-    pygame.draw.rect(f, mm.Blanc, [200, 690, 500, 28])
-    f.blit(police.render(texte, 1, mm.Noir), (230, 692))
-    pygame.display.update()
-
 
 def main() -> None:
     pygame.init()
@@ -32,10 +15,10 @@ def main() -> None:
     mm.afficherChoixCouleur(fenetre)
     pygame.display.update()
 
-    # b. combinaison secrète
+    # b.combinaison secrète
     secret = genererSecret()
 
-    # c. boucle de jeu
+    #c. boucle de jeu
     gagne = False
     ligne = 1
     while not gagne and ligne <= NB_COUPS_MAX:
@@ -58,7 +41,7 @@ def main() -> None:
     else:
         afficherMessage(fenetre, "Vous avez perdu !")
 
-    # e. attendre la fermeture de la fenêtre
+    # e attendre la fermeture de la fenêtre
     attente = True
     while attente:
         for event in pygame.event.get():

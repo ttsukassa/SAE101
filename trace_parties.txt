@@ -5,6 +5,7 @@ coup 3: résultat (1, 4)
 coup 4: résultat (3, 2)
 coup 5: résultat (5, 0)
 Vous avez gagné en 5 coups !
+
 --- partie perdue ---
 coup 1: résultat (0, 0)
 coup 2: résultat (0, 0)
