@@ -159,11 +159,5 @@ Dans `mm.py`, la première ligne de proposition est dessinée un cran au-dessus 
 première ligne du plateau. Le programme principal compense en demandant l'affichage de
 la ligne `ligne + 1`, ce qui place chaque proposition et son résultat dans la bonne case.
 
----
-
-<div align="center">
-
-*Réalisé par [Nom Prénom 1] et [Nom Prénom 2]*
-*avec l'aide de Claude (Anthropic)*
 
 </div>
