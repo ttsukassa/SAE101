@@ -134,7 +134,7 @@ La règle du « plus petit nombre » protège des doublons : un pion du secret n
 SAE101
 ├── main.py              le programme principal : plateau, boucle de jeu, message final, rejouer / quitter
 ├── mm.py                la bibliothèque fournie (pygame) et la fonction distance
-├── fonctions.py         tirage du secret, messages de fin, calcul du résultat
+├── fonctions.py         tirage du secret, message final, calcul du résultat
 ├── trace_parties.txt    traces d'exécution des parties jouées
 └── partie_2..5.png      captures d'écran des parties
 ```
@@ -148,7 +148,6 @@ SAE101
 | `nbMalPlaces(secret, prop)` | communs moins bien placés |
 | `resultat(secret, prop)` | renvoie le couple `(bien placés, mal placés)` |
 | `afficherMessage(f, texte)` | écrit le message final sous le plateau |
-| `afficherAide(f)` | affiche le rappel des touches (`Echap` et `R`) en fin de manche |
 
 ---
 

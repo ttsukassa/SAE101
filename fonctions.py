@@ -19,14 +19,6 @@ def afficherMessage(f: pygame.Surface, texte: str) -> None:
     pygame.display.update()
 
 
-def afficherAide(f: pygame.Surface) -> None:
-    # Affiche les touches disponibles une fois la manche terminée (colonne de gauche).
-    police = pygame.font.SysFont("monospace", 15)
-    f.blit(police.render("Echap : quitter", 1, mm.Noir), (20, 600))
-    f.blit(police.render("R : rejouer", 1, mm.Noir), (20, 625))
-    pygame.display.update()
-
-
 #Fonctions pour calculer le résultat d'une proposition
 
 def nbBienPlaces(secret: list, prop: list) -> int:
