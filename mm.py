@@ -37,7 +37,7 @@ def afficherCombinaison(laFenetre:pygame.Surface,laCombinaison:list,numLigne:int
         
     pygame.display.update()
 
-def afficherPlateau(f:pygame.Surface)->None:
+def afficherPlateau(f:pygame.Surface):
     pygame.draw.rect(f,Marron,[300,0,200,40])
     for i in range(5):
         pygame.draw.rect(f,Noir,[300+40*i,0,40,40],1)
@@ -62,21 +62,19 @@ def afficherPlateau(f:pygame.Surface)->None:
     f.blit(label4, (100, 430))
     f.blit(label1, (570, 200))
     f.blit(label2, (570, 220))
-    pygame.display.update()
 
-def afficherChoixCouleur(f:pygame.Surface)->None:
+def afficherChoixCouleur(f:pygame.Surface):
     for i in range(len(TabCouleur)):
         pygame.draw.circle(f,TabCouleur[i],[75,80+40*i],15)
         pygame.draw.circle(f,Noir,[75,80+40*i],15,1)
     pygame.draw.circle(f,Marron,[75,80+40*9],15)
     pygame.draw.circle(f,Noir,[75,80+40*9],15,1)
-    pygame.display.update()
 
 def distance(a:list,b:list)->float:
     # Distance euclidienne entre les points a=[xa,ya] et b=[xb,yb].
     return math.sqrt((a[0]-b[0])**2+(a[1]-b[1])**2)
 
-def getChoixCouleur()->None:
+def getChoixCouleur():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -124,5 +122,4 @@ def afficherResultat(f:pygame.Surface,res,ligne):
         pygame.draw.circle(f,Noir,centres[i],4)
         i = i + 1
         j = j + 1
-    pygame.display.update()
         

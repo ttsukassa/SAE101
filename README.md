@@ -126,7 +126,8 @@ SAE101
 ├── main.py              le programme principal : plateau, boucle de jeu, message final
 ├── mm.py                la bibliothèque fournie (pygame) et la fonction distance
 ├── fonctions.py         tirage du secret, message final, calcul du résultat
-└── trace_parties.txt    traces d'exécution des parties jouées
+├── trace_parties.txt    traces d'exécution des parties jouées
+└── partie_2..5.png      captures d'écran des parties
 ```
 
 | Fonction | Rôle |
@@ -158,6 +159,3 @@ SAE101
 Dans `mm.py`, la première ligne de proposition est dessinée un cran au-dessus de la
 première ligne du plateau. Le programme principal compense en demandant l'affichage de
 la ligne `ligne + 1`, ce qui place chaque proposition et son résultat dans la bonne case.
-
-
-</div>
