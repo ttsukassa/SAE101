@@ -1,13 +1,11 @@
 import pygame
 import mm
-from fonctions import genererSecret, resultat, afficherMessage
+from fonctions import genererSecret, resultat, afficherMessage, afficherAide
 
 NB_PIONS = 5
 NB_COUPS_MAX = 15
 
-def main() -> None:
-    pygame.init()
-    fenetre = pygame.display.set_mode((800, 720))
+def jouer(fenetre: pygame.Surface) -> None:
     fenetre.fill(mm.Blanc)
 
     # a. affichage de l'IHM
@@ -41,13 +39,30 @@ def main() -> None:
             afficherMessage(fenetre, "Vous avez gagné en " + str(ligne) + " coups !")
     else:
         afficherMessage(fenetre, "Vous avez perdu !")
+    afficherAide(fenetre)
 
-    # e attendre la fermeture de la fenêtre
-    attente = True
-    while attente:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                attente = False
+
+def main() -> None:
+    pygame.init()
+    fenetre = pygame.display.set_mode((800, 720))
+
+    rejouer = True
+    while rejouer:
+        jouer(fenetre)
+
+        # e attendre : Echap quitte, R relance une partie
+        rejouer = False
+        attente = True
+        while attente:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    attente = False
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        attente = False
+                    if event.key == pygame.K_r:
+                        rejouer = True
+                        attente = False
     pygame.quit()
 
 
